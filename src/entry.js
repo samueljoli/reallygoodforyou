@@ -10,6 +10,7 @@
 import { WebGLRenderer, PerspectiveCamera, Scene, Vector3, LoadingManager } from 'three';
 import SeedScene from './objects/Scene.js';
 import ColladaLoader from 'colladaloader2asmodule';
+import * as Logo from './objects/Logo/asset.dae';
 
 let logo;
 const scene = new Scene();
@@ -22,7 +23,7 @@ const loadingManager = new LoadingManager(() => {
 const loader = new ColladaLoader( loadingManager );
 
 // load 3d logo
-loader.load('src/objects/Logo/asset.dae', function onLoadCb( collada ) {
+loader.load('asset.dae', function onLoadCb( collada ) {
   logo = collada.scene;
   logo.position.x = -.5;
 });
