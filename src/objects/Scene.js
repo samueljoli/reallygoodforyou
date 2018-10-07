@@ -11,10 +11,14 @@ export default class SeedScene extends Group {
     const flower = new Flower();
     const lights = new BasicLights();
 
-    this.add(land, flower, lights);
+    console.log(flower.position);
+
+
+
+    this.add(lights, land, flower);
   }
 
   update(timeStamp) {
-    this.rotation.y = timeStamp / 10000;
+    this.rotation.y = timeStamp / 1000;
   }
 }

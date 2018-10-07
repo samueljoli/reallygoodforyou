@@ -18,6 +18,7 @@
     "push": "git push heroku master"
   },
   "dependencies": {
+    "colladaloader2asmodule": "git+https://git@github.com/Samueljoli/ColladaLoader2asModule.git",
     "serve": "10.0.2",
     "three": "^0.91.0",
     "three-obj-loader": "^1.1.3",

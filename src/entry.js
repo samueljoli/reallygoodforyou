@@ -7,13 +7,25 @@
  * 
  */
 
-import { WebGLRenderer, PerspectiveCamera, Scene, Vector3 } from 'three';
+import { WebGLRenderer, PerspectiveCamera, Scene, Vector3, LoadingManager } from 'three';
 import SeedScene from './objects/Scene.js';
+import ColladaLoader from 'colladaloader2asmodule';
 
+let logo;
 const scene = new Scene();
 const camera = new PerspectiveCamera();
 const renderer = new WebGLRenderer({antialias: true});
 const seedScene = new SeedScene();
+const loadingManager = new LoadingManager(() => {
+  seedScene.add(logo);
+});
+const loader = new ColladaLoader( loadingManager );
+
+// load 3d logo
+loader.load('src/objects/Logo/asset.dae', function onLoadCb( collada ) {
+  logo = collada.scene;
+  logo.position.x = -.5;
+});
 
 // scene
 scene.add(seedScene);
