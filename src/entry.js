@@ -11,7 +11,6 @@ import { WebGLRenderer, PerspectiveCamera, Scene, Vector3, LoadingManager } from
 import SeedScene from './objects/Scene.js';
 import ColladaLoader from 'colladaloader2asmodule';
 import * as Logo from './objects/Logo/asset.dae';
-import { addTicker } from './helpers';
 
 let logo;
 const scene = new Scene();
@@ -61,9 +60,6 @@ window.addEventListener('resize', windowResizeHanlder);
 
 
 // dom
-
-addTicker(document);
-
 document.body.style.margin = 0;
 document.body.appendChild( renderer.domElement );
 
