@@ -10,7 +10,7 @@
 import { WebGLRenderer, PerspectiveCamera, Scene, Vector3, LoadingManager } from 'three';
 import SeedScene from './objects/Scene.js';
 import ColladaLoader from 'colladaloader2asmodule';
-import * as Logo from './objects/Logo/asset.dae';
+import * as Logo from './objects/Logo/asset.dae'; // only here so it makes it way to build dir via react
 
 let logo;
 const scene = new Scene();
