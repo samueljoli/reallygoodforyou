@@ -32,5 +32,8 @@
     "heroku-postbuild": "npm run build",
     "push": "git push heroku master"
   },
-  "homepage": "https://thereax.com"
+  "homepage": "https://thereax.com",
+  "devDependencies": {
+    "file-loader": "2.0.0"
+  }
 }
