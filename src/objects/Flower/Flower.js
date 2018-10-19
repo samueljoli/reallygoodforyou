@@ -14,7 +14,7 @@ export default class Flower extends Group {
     this.scale.z = .5;
     this.name = 'flower';
 
-    loader.load(MODEL, (mesh)=>{
+    loader.parse(MODEL, (mesh) => {
       this.add(mesh);
     });
   }

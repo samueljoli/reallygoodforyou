@@ -34,6 +34,6 @@
   },
   "homepage": "https://thereax.com",
   "devDependencies": {
-    "file-loader": "2.0.0"
+    "file-loader": "1.1.11"
   }
 }

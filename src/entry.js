@@ -6,7 +6,6 @@
  * handles window resizes.
  * 
  */
-
 import { WebGLRenderer, PerspectiveCamera, Scene, Vector3 } from 'three';
 import SeedScene from './objects/Scene.js';
 
@@ -49,4 +48,3 @@ window.addEventListener('resize', windowResizeHanlder);
 // dom
 document.body.style.margin = 0;
 document.body.appendChild( renderer.domElement );
-
