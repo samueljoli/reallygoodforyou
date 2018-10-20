@@ -90,11 +90,11 @@ class Home extends Component {
 
     return (
       <Row type="flex" justify="center"> 
-          <Container
-            ref={(mount) => {
-              this.mount = mount;
-            }}
-          />
+        <Container
+          ref={(mount) => {
+            this.mount = mount;
+          }}
+        />
       </Row>
     );
   }
