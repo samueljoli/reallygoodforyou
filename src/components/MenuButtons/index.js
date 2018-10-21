@@ -6,7 +6,7 @@ import { isMobile } from 'react-device-detect';
 
 const HomeDiv = styled.div`
   position: absolute;
-  color: white;
+  color: black;
   font-family: 'Roboto Mono', monospace;
   font-size: 1.5em;
   top: 0;
@@ -16,6 +16,7 @@ const HomeDiv = styled.div`
 
 const WorkDiv = styled.div`
   position: absolute;
+  color: black;
   font-size: 1.5em;
   font-family: 'Roboto Mono', monospace;
   top: 0;
@@ -25,6 +26,7 @@ const WorkDiv = styled.div`
 
 const AboutDiv = styled.div`
   position: absolute;
+  color: black;
   font-size: 1.5em;
   font-family: 'Roboto Mono', monospace;
   bottom: 0;
@@ -35,7 +37,7 @@ const AboutDiv = styled.div`
 const ContactDiv = styled.div`
   position: absolute;
   font-size: 1.5em;
-  color: white;
+  color: black;
   font-family: 'Roboto Mono', monospace;
   bottom: 0;
   right: 0;
@@ -43,7 +45,7 @@ const ContactDiv = styled.div`
 `;
 
 const LinkWrapper = styled(Link)`
-  color: white;
+  color: black;
 `;
 
 const MenuButtons = () => {

@@ -7,10 +7,12 @@ import SeedScene from '../../objects/Scene.js';
 import media from '../../helpers/media';
 
 const Container = styled.div`
+  margin-top: 200px;
   height: 400px;
   width: 80%;
 
   ${media.sm`
+    margin-top: 100px;
     height: 600px;
     width: 600px;
   `
@@ -48,7 +50,7 @@ class Home extends Component {
 
     // renderer
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setClearColor('black', 1);
+    this.renderer.setClearColor('white', 1);
     this.mount.appendChild(this.renderer.domElement);
 
     // handle resize
@@ -89,7 +91,7 @@ class Home extends Component {
   render() {
 
     return (
-      <Row type="flex" justify="center" style={{ backgroundColor: 'black' }}>
+      <Row type="flex" justify="center" style={{ backgroundColor: 'white' }}>
         <Container
           ref={(mount) => {
             this.mount = mount;
