@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import Typed from 'typed.js';
 
 class TypedSpan extends Component {

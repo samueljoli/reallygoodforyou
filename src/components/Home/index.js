@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Row, Col } from 'antd';
+import { Row } from 'antd';
 import { WebGLRenderer, PerspectiveCamera, Scene, Vector3 } from 'three';
 
 import SeedScene from '../../objects/Scene.js';
