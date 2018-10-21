@@ -48,7 +48,7 @@ class Home extends Component {
 
     // renderer
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setClearColor('white', 1);
+    this.renderer.setClearColor('black', 1);
     this.mount.appendChild(this.renderer.domElement);
 
     // handle resize
@@ -89,7 +89,7 @@ class Home extends Component {
   render() {
 
     return (
-      <Row type="flex" justify="center"> 
+      <Row type="flex" justify="center" style={{ backgroundColor: 'black' }}>
         <Container
           ref={(mount) => {
             this.mount = mount;

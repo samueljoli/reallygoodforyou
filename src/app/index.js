@@ -3,6 +3,7 @@ import { Router, Route } from 'react-router-dom';
 import { Layout, Row, Col } from 'antd';
 import history from '../helpers/history';
 import Home from '../components/Home';
+import Work from '../components/Work';
 
 import Container from '../components/Container';
 
@@ -14,9 +15,10 @@ const { Content } = Layout;
 const App = () => {
   return (
     <Router history={history}>
-        <Container>
-          <Route exact path="/" component={Home} />
-        </Container>
+      <Container>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/work" component={Work} />
+      </Container>
     </Router>
   );
 };

@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import TypedSpan from './TypedSpan';
 import { isMobile } from 'react-device-detect';
 
 const HomeDiv = styled.div`
   position: absolute;
+  color: white;
   font-family: 'Roboto Mono', monospace;
   font-size: 1.5em;
   top: 0;
@@ -33,34 +35,47 @@ const AboutDiv = styled.div`
 const ContactDiv = styled.div`
   position: absolute;
   font-size: 1.5em;
+  color: white;
   font-family: 'Roboto Mono', monospace;
   bottom: 0;
   right: 0;
   margin: 30px;
 `;
 
+const LinkWrapper = styled(Link)`
+  color: white;
+`;
+
 const MenuButtons = () => {
   return (
     <div>
       <HomeDiv>
-        <TypedSpan
-          string={`${!isMobile ? 'really.good.for.you' : 'r.g.f.y'}`}
-        />
+        <LinkWrapper to="/">
+          <TypedSpan
+            string={`${!isMobile ? 'really.good.for.you' : 'r.g.f.y'}`}
+          />
+        </LinkWrapper>
       </HomeDiv>
       <WorkDiv>
-        <TypedSpan
-          string="projects"
-        />
+        <LinkWrapper to="/work">
+          <TypedSpan
+            string="projects"
+          />
+        </LinkWrapper>
       </WorkDiv>
       <AboutDiv>
-        <TypedSpan
-          string="who.tf"
-        />
+        <LinkWrapper to="/about">
+          <TypedSpan
+            string="who.tf"
+          />
+        </LinkWrapper>
       </AboutDiv>
       <ContactDiv>
-        <TypedSpan
-          string="hit.me"
-        />
+        <LinkWrapper to ="/contact">
+          <TypedSpan
+            string="hit.me"
+          />
+        </LinkWrapper>
       </ContactDiv>
     </div>
   );

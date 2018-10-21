@@ -19,6 +19,10 @@ class TypedSpan extends Component {
     this.typed.destoy();
   }
 
+  componentWillUpdate() {
+    this.typed.reset(true);
+  }
+
   render() {
     return (
       <span
