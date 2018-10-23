@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@fullpage/react-fullpage": "0.1.2",
     "antd": "3.9.3",
     "aos": "2.3.3",
     "babel-plugin-import": "1.9.1",

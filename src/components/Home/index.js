@@ -34,6 +34,7 @@ const Container = styled.div`
 
 const StyledRow = styled(Row)`
   height: 100vh;
+  background-color: white;
 `;
 
 class Home extends Component {
@@ -79,6 +80,7 @@ class Home extends Component {
   }
 
   componentWillUnmount() {
+    console.log('Unmouting');
     this.stop();
     this.mount.removeChild(this.renderer.domElement);
   }
@@ -108,7 +110,7 @@ class Home extends Component {
   render() {
 
     return (
-      <StyledRow type="flex" justify="center" align="middle" style={{ backgroundColor: 'white' }}>
+      <StyledRow type="flex" justify="center" align="middle">
         <Container
           ref={(mount) => {
             this.mount = mount;
