@@ -7,6 +7,7 @@ export default class Land extends Group {
 
     super();
 
+    this.position.y = 2;
     this.name = 'land';
 
     loader.parse(MODEL, (mesh) => {
