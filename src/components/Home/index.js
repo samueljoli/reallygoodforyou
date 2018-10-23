@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Row } from 'antd';
 import { WebGLRenderer, PerspectiveCamera, Scene, Vector3 } from 'three';
 
 import SeedScene from '../../objects/Scene.js';
 import media from '../../helpers/media';
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
 const Container = styled.div`
   height: 400px;
   width: 80%;
+  animation: ${fadeIn} 1s ease-in;
 
   ${media.sm`
     margin-top: 100px;
     height: 600px;
     width: 600px;
+    animation: ${fadeIn} 2s ease-in;
   `
   }
 `;
