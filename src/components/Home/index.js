@@ -7,7 +7,6 @@ import SeedScene from '../../objects/Scene.js';
 import media from '../../helpers/media';
 
 const Container = styled.div`
-  margin-top: 200px;
   height: 400px;
   width: 80%;
 
@@ -17,6 +16,10 @@ const Container = styled.div`
     width: 600px;
   `
   }
+`;
+
+const StyledRow = styled(Row)`
+  height: 100vh;
 `;
 
 class Home extends Component {
@@ -91,13 +94,13 @@ class Home extends Component {
   render() {
 
     return (
-      <Row type="flex" justify="center" style={{ backgroundColor: 'white' }}>
+      <StyledRow type="flex" justify="center" align="middle" style={{ backgroundColor: 'white' }}>
         <Container
           ref={(mount) => {
             this.mount = mount;
           }}
         />
-      </Row>
+      </StyledRow>
     );
   }
 }
