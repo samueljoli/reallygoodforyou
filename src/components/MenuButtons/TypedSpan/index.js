@@ -15,7 +15,7 @@ class TypedSpan extends Component {
   }
 
   componentWillUnmount() {
-    this.typed.destoy();
+    this.typed.destroy();
   }
 
   componentWillUpdate() {

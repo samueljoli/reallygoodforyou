@@ -7,9 +7,11 @@ const { Content } = Layout;
 
 class Container extends Component {
   render() {
+    const { location } = this.props.history;
+
     return (
       <Layout>
-        <MenuButtons />
+        <MenuButtons location={location}/>
         <Content>
           {this.props.children}
         </Content>

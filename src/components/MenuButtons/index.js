@@ -48,39 +48,46 @@ const LinkWrapper = styled(Link)`
   color: black;
 `;
 
-const MenuButtons = () => {
-  return (
-    <div className="rgfy-menu-buttons">
-      <HomeDiv>
-        <LinkWrapper to="/">
-          <TypedSpan
-            string={`${!isMobile ? 'really.good.for.you' : 'r.g.f.y'}`}
-          />
-        </LinkWrapper>
-      </HomeDiv>
-      <WorkDiv>
-        <LinkWrapper to="/projects">
-          <TypedSpan
-            string="projects"
-          />
-        </LinkWrapper>
-      </WorkDiv>
-      <AboutDiv>
-        <LinkWrapper to="/about">
-          <TypedSpan
-            string="who.tf"
-          />
-        </LinkWrapper>
-      </AboutDiv>
-      <ContactDiv>
-        <LinkWrapper to ="/contact">
-          <TypedSpan
-            string="hit.me"
-          />
-        </LinkWrapper>
-      </ContactDiv>
-    </div>
-  );
+const MenuButtons = (props) => {
+  const { location } = props;
+  const isNotHome = location.pathname !== '/';
+
+  if (isNotHome) {
+    return (
+      <div className="rgfy-menu-buttons">
+        <HomeDiv>
+          <LinkWrapper to="/">
+            <TypedSpan
+              string={`${!isMobile ? 'really.good.for.you' : 'r.g.f.y'}`}
+            />
+          </LinkWrapper>
+        </HomeDiv>
+        <WorkDiv>
+          <LinkWrapper to="/projects">
+            <TypedSpan
+              string="projects"
+            />
+          </LinkWrapper>
+        </WorkDiv>
+        <AboutDiv>
+          <LinkWrapper to="/about">
+            <TypedSpan
+              string="who.tf"
+            />
+          </LinkWrapper>
+        </AboutDiv>
+        <ContactDiv>
+          <LinkWrapper to ="/contact">
+            <TypedSpan
+              string="hit.me"
+            />
+          </LinkWrapper>
+        </ContactDiv>
+      </div>
+    );
+  }
+
+  return <div></div>;
 };
 
 export default MenuButtons;
