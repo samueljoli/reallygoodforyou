@@ -50,7 +50,7 @@ const LinkWrapper = styled(Link)`
 
 const MenuButtons = () => {
   return (
-    <div>
+    <div className="rgfy-menu-buttons">
       <HomeDiv>
         <LinkWrapper to="/">
           <TypedSpan
@@ -59,7 +59,7 @@ const MenuButtons = () => {
         </LinkWrapper>
       </HomeDiv>
       <WorkDiv>
-        <LinkWrapper to="/work">
+        <LinkWrapper to="/projects">
           <TypedSpan
             string="projects"
           />

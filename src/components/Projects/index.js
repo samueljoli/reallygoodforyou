@@ -11,7 +11,11 @@ class Home extends Component {
   render() {
 
     return (
-      <Row type="flex" justify="center"> 
+      <Row
+        type="flex"
+        justify="center"
+        style={{ backgroundColor: 'white' }}
+      >
         <Container />
       </Row>
     );
